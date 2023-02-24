@@ -116,7 +116,7 @@ Props that can be passed to the component are listed below:
             <td><code>undefined</code></td>
         </tr>
         <tr>
-            <td><code><b>renderBubble?:</b> (step: IStep, stepIndex: number): ReactElement</code></td>
+            <td><code><b>renderBubble?:</b> (step: object, stepIndex: number): ReactElement</code></td>
             <td>
                A render function to customize your step indicator with your own element.
             </td>
