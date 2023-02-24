@@ -1,7 +1,7 @@
 
 # React Vertical Stepper
-
-<a  href="https://www.npmjs.com/package/@hodgef/ts-library-boilerplate-basic"><img  src="https://badgen.net/npm/v/@hodgef/ts-library-boilerplate-basic?color=blue"  alt="npm version"></a>  <a  href="https://github.com/hodgef/ts-library-boilerplate"><img  src="https://img.shields.io/github/last-commit/hodgef/ts-library-boilerplate"  alt="latest commit"></a>  <a  href="https://github.com/hodgef/ts-library-boilerplate-basic/actions"><img  alt="Build Status"  src="https://github.com/hodgef/ts-library-boilerplate-basic/workflows/Build/badge.svg?color=green"  /></a>  <a  href="https://github.com/hodgef/ts-library-boilerplate-basic/actions">  <img  alt="Publish Status"  src="https://github.com/hodgef/ts-library-boilerplate-basic/workflows/Publish/badge.svg?color=green"  /></a>
+<!-- 
+<a  href="https://www.npmjs.com/package/@hodgef/ts-library-boilerplate-basic"><img  src="https://badgen.net/npm/v/@hodgef/ts-library-boilerplate-basic?color=blue"  alt="npm version"></a>  <a  href="https://github.com/hodgef/ts-library-boilerplate"><img  src="https://img.shields.io/github/last-commit/hodgef/ts-library-boilerplate"  alt="latest commit"></a>  <a  href="https://github.com/hodgef/ts-library-boilerplate-basic/actions"><img  alt="Build Status"  src="https://github.com/hodgef/ts-library-boilerplate-basic/workflows/Build/badge.svg?color=green"  /></a>  <a  href="https://github.com/hodgef/ts-library-boilerplate-basic/actions">  <img  alt="Publish Status"  src="https://github.com/hodgef/ts-library-boilerplate-basic/workflows/Publish/badge.svg?color=green"  /></a> -->
 
   
 >A fully customizable ready to use vertical stepper UI package.
@@ -22,8 +22,8 @@ React Vertical Stepper can run in a very basic mode by just providing the `steps
 import Stepper from 'react-vertical-stepper';
 
 <Stepper
-    steps={stepsArray}
-    currentStepIndex={currentStepIndex}
+  steps={stepsArray}
+  currentStepIndex={currentStepIndex}
 />
 ```
 Here the steps array is an array of objects with basic keys like
@@ -38,28 +38,30 @@ Here the steps array is an array of objects with basic keys like
 
 An example for steps array is shown below:
 ```
-stepsArray = [{
-        label: 'Step 1',
-        description: 'This is Step 1',
-        status: 'visited'
-    },
-    {
-        label: 'Step 2',
-        description: 'This is Step 2',
-        status: 'unvisited'
-     },
-     {
-        label: 'Step 3',
-        description: 'This is Step 3',
-        status: 'completed'
-     }];
+stepsArray = [
+  {
+    label: 'Step 1',
+    description: 'This is Step 1',
+    status: 'visited'
+  },
+  {
+    label: 'Step 2',
+    description: 'This is Step 2',
+    status: 'unvisited'
+  },
+  {
+    label: 'Step 3',
+    description: 'This is Step 3',
+    status: 'completed'
+  }
+];
 ```
 You can use `onStepClick` event handler which fires each time you click on a step or its label or description
 ```
 const [activeStepIndex, setActiveStepIndex] = useState(0);
 
 const handleStepClick = (step, stepIndex) => {
-setActiveStepIndex(stepIndex);
+  setActiveStepIndex(stepIndex);S
 };
 
 <Stepper
@@ -72,7 +74,7 @@ You can also customize the step indicator bubble with your own DOM element using
 ```
 <Stepper
   steps={stepsArray}
-  currentStepIndex={currentStepIndex}overrides styles of step connector line after current active step
+  currentStepIndex={currentStepIndex}
   renderBubble={(step, stepIndex) => (<div key={stepIndex}>{step.label}</div>)}
 />
 ```
