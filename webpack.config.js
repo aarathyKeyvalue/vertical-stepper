@@ -26,7 +26,7 @@ const banner = `
 module.exports = {
   mode: "production",
   devtool: 'source-map',
-  entry: './src/index.ts',
+  entry: './src/index.tsx',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, 'build'),
@@ -57,6 +57,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      { 
+        test: /\.scss$/,
+        use: ['sass-loader']
       }
     ]
   },
